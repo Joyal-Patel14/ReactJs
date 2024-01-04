@@ -1,0 +1,32 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is react learning",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joyal-Patel14/ReactJs.git"
+  },
+  "keywords": [
+    "RactJs"
+  ],
+  "author": "Joyal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joyal-Patel14/ReactJs/issues"
+  },
+  "homepage": "https://github.com/Joyal-Patel14/ReactJs#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

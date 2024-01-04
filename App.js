@@ -16,6 +16,9 @@
  * React element (Object) => HTML (Browser understands)
  */
 
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 // We can use React with out JSX also. This code is core of react, without JSX.
 const heading = React.createElement("h1", {id: "heading"}, "Hello World from React!");
 

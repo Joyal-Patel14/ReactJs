@@ -1,0 +1,27 @@
+> npm does not stand for node package manager. It's just package manager
+
+> npm install -D parcel : -D is for dev dependecies.
+
+> parcel bundles our app code for production
+  1. Dev build
+  2. Local server
+  3. HMR - Hot Module Replacement
+  4. File watching algorithm - written in c++
+  5. Caching - faster build
+  6. Image optimization
+  7. Minification
+  8. Bundling
+  9. Compressing
+  10. Consistent hashing
+  11. Differential bundling - support older browser
+  12. Error handling
+  13. Tree shaking - remove unused code
+
+> "^2.8.4" : "^" is for keeping vesrion even for minor patch like 2.8.5
+
+> difference between package.json and package-lock.json: 
+  package.json records for approx vesrion and package-lock.json keeps exact vesrion.
+
+> each package inside node_modules have it's own package.json and dependecies. So 1 project have multiple package.json files.
+
+> "npx" is for executing the package. 'npx parcel index.html' build app and runs on //localhost:1234
