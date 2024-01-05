@@ -1,0 +1,13 @@
+> Added scripts in package.json files
+
+> JSX is not html in JS, It is html like syntax.
+
+> JSX is not directly understood by JS Engine. It is transpiled by parcel before it reaches to JS Engine.
+
+> parcel do not transpile it self, It gives code to Babel to transpile the JSX code.
+
+> camleCase is used for applying attribute to JSX
+
+> There are 2 types of React Components: Functional Components and Class Based Components
+
+> Functional Components: Just normal JS Function returns JSX

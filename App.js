@@ -1,52 +1,51 @@
-/**
- * How to create nested elements
- * 
- * <div id="patent">
- *    <div id="child">
- *        <h1>I'm h1 tag</h1>
- *        <h2>I'm h2 tag</h2>
- *    </div>
- *    <div id="child2">
- *        <h1>I'm h1 tag</h1>
- *        <h2>I'm h2 tag</h2>
- *    </div>
- * </div>
- * 
- * 
- * React element (Object) => HTML (Browser understands)
- */
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// We can use React with out JSX also. This code is core of react, without JSX.
-const heading = React.createElement("h1", {id: "heading"}, "Hello World from React!");
+// JSX - is not HTML in JS (HTML like syntax)
+// JSX => Babel Transpiles to => React.createElement => ReactElement - JS Object => HTML Element(render)
+// camleCase is used for attribute in JSX
 
-const parent = React.createElement(
-  "div",
-  {id: "parent"},
-  [
-    React.createElement(
-      "div",
-      {id: "child"},
-      [
-        React.createElement("h1", {}, "I'm h1 tag"),
-        React.createElement("h2", {}, "I'm h2 tag")
-      ]
-    ),
-    React.createElement(
-      "div",
-      {id: "child2"},
-      [
-        React.createElement("h1", {}, "I'm h1 tag"),
-        React.createElement("h2", {}, "I'm h2 tag")
-      ]
-    ),
-  ]
+// React Element
+const headingElement = (
+  <h1 id="heading" className="head">
+    React using JSX
+  </h1>
 );
 
-console.log(parent); // object
+// React Component
+
+// Class Based Components - OLD
+// Functional Components - NEW
+
+// Functional Component - It is simple JS function returning JSX
+
+const TitleComponent = () => {
+  return (
+    <h1>Title</h1>
+  );
+}
+
+const number = 1000;
+
+// Component Composition - Component inside Component
+const HeadingComponent = () => (
+  <div id="container">
+
+    <h1>This is a react functional component</h1>
+
+    {TitleComponent()}
+    
+    <TitleComponent />
+
+    <TitleComponent></TitleComponent>
+
+    {headingElement}
+    
+    <h2>{number * 2}</h2>
+
+  </div>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+root.render(<HeadingComponent />);
