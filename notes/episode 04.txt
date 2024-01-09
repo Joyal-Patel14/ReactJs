@@ -1,0 +1,9 @@
+> Components are just normal JS functions.
+
+> We can make component dynamic by passing props.
+
+> Props are just arguments of the function.
+
+> config driven UI - config friven UI means UI which is on config based and config is send by backend.
+
+> Whenever you are looping over something always pass the unique key.
