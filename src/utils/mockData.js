@@ -1,24 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-/**
- * Header
- *  - Logo
- *  - Nav Items
- * Body
- *  - Search
- *  - RestaurantContainer
- *    - RestaurantCard
- * Footer
- *  - Copyright
- *  - Links
- *  - Address
- *  - Contacts
- */
-
-
 // Zomato API data
-const restaurantList = [
+export const restaurantList = [
   {
       "type": "restaurant",
       "info": {
@@ -1835,66 +1816,3 @@ const restaurantList = [
       ]
   }
 ];
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2fk9bEtfrM3w5xy1359DNnG4_-YW8R0M12EYK7o9Raw&s" />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contanct Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-}
-
-const RestaurantCard = (props) => {
-  const {resData} = props;
-
-  const {name, image, cuisine, rating, cft} = resData?.info;
-  const {deliveryTime} = resData?.order;
-
-  return (
-    <div className="res-card">
-      <img className="res-logo" src={image.url} alt="Food image" />
-      <h3>{name}</h3>
-      <h4>{cuisine.map((obj => obj.name)).join(", ")}</h4>
-      <h4>{rating.rating_text + " " + rating.rating_subtitle}</h4>
-      <h4>{cft.text}</h4>
-      <h4>{deliveryTime} Minutes</h4>
-    </div>
-  );
-}
-
-// not using keys (not acceptable) <<<< index as key <<<<<<<<<<<<<< unique id (best practice)
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      <div className="res-container">
-        {
-          restaurantList.map(restaurant => <RestaurantCard key = {restaurant.info.resId} resData = {restaurant}/>)
-        }
-      </div>
-    </div>
-  );
-}
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);

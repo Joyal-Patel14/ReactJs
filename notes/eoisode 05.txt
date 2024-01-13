@@ -1,0 +1,17 @@
+> two types of export/import
+  - Default : Each file have only one default export
+    export default Component;
+    import Component from "path";
+  
+  - Named export/import
+    export const Component;
+    import { Component } from "path";
+
+React Hooks
+> (Normal JS Utility functions)
+- useState() - Super powerful state variable in react
+- useEffect()
+
+> Whenever state variable changes React re-render the Component
+
+> React uses Reconciliation algorithm (React Fiber): https://excalidraw.com/#json=sRqJWYkK-PaCp8dPgas3R,3q3sDNiZvPP5usyRNRYmyw
