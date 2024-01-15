@@ -1,0 +1,3 @@
+> Shimmer UI - Shimmer UI means you show user some ui until data loads.
+
+> Whenever state variable changes, react triggers a reconciliation cycle (re-renders the component).
