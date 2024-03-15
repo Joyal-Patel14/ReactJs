@@ -2,6 +2,11 @@
 
 > use Link component from "react-router-dom" beacause it do not render whole page.
 
+> In react never use <a></a> tag for routing because it renders whole page.
+> <Link /> component only renders component not whole page.
+
 > 2 types of routing in web app
   - Client side routing - Already have code on client side just render the needed one.
   - Server side routing - Make network call to server to fetch HTML.
+
+> React app should never reload whole page. That's why it called single page application. (Client side routing)
