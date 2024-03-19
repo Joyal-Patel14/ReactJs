@@ -9,3 +9,29 @@
 > `this.state` is large object in which we can create multiple state variables.
 
 > NEVER UPDATE STATE VARIABLES DIRECTLY
+
+> Component Lifecycle: constructor -> render (id child in render then follows same for child) -> componentDidMount()
+
+> componentDidMount() is used to make API calls, but why?
+
+> We want to quickly render the component and then fetch data and fill it in the component that's why API calls are written in componentDidMount()
+
+> Link to proper Lifecycle Method diagram: https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+> On having multiple child, Component Lifecycle follows this way:
+
+        Parent costructor
+        Parent Render
+        Child 1 (Class)Child constructor
+        Child 1 (Class)Child Render
+        Child 2 (Class)Child constructor
+        Child 2 (Class)Child Render
+        Child 1 (Class)Child componentDidMount method called
+        Child 2 (Class)Child componentDidMount method called
+        Parent componentDidMount method called
+
+    Reason : React sees there is 2 child. So it batch the render phase for these 2 childs and then call componentDidMount() for childs. (Optimization)
+             refer to the diagram above.
+    
+    Optimization: Batching Render phase of child leads to run Commit phase only once. As Commit phase is expensive because it updates actual DOM. So running 
+                    Commit phase(DOM UPDATE) in Single Batch.
