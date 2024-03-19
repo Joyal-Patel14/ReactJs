@@ -1,0 +1,11 @@
+> Class Based Components
+
+> In Class Based Components -> inherit React.Component class and have `render` method returning JSX
+
+> Loading a class based Component means creating instance of that class.
+
+> Each time on instance initialization, constructor is called so it is best place to define state variables.
+
+> `this.state` is large object in which we can create multiple state variables.
+
+> NEVER UPDATE STATE VARIABLES DIRECTLY
