@@ -35,3 +35,16 @@
     
     Optimization: Batching Render phase of child leads to run Commit phase only once. As Commit phase is expensive because it updates actual DOM. So running 
                     Commit phase(DOM UPDATE) in Single Batch.
+
+
+---------------- FROM LIVE CLASS CLIP ----------------------------------
+
+> NEVER compare componentDidMount with useEffect of functional component.
+
+> If any code is written inside componentDidMount it will be executed repeatedly beacause we are not
+    refreshing page as React is single page application. --> Performance Issue
+
+> SOLUTION: Clean timers and intervals in componentWillUnmount() method.
+
+> How can we clear timers defined in useEffect?
+  SOLUTION: return function in useEffect clearing the timer. This function is called when you are unmounting the component

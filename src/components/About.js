@@ -6,12 +6,22 @@ import UserClass from "./UserClass";
 class About extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      count: 0,
+    }
   }
 
   componentDidMount() {
     console.log("Parent componentDidMount method called");
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    // // how to handle dependency in class based component ([count])
+    // if (this.state.count !== prevState.count) {
+    //   // CODE
+    // }
+  }
 
   render() {
     return (

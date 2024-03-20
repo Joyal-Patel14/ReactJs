@@ -17,17 +17,13 @@ class UserClass extends React.Component {
   }
 
   async componentDidMount() {
-    // console.log(this.props.name + "Child componentDidMount method called");
+    console.log("Child componentDidMount method called");
 
-    // API call
-    const data = await fetch("https://api.github.com/users/Joyal-Patel14");
-    const json = await data.json();
+    // setting time interval
+    this.timer = setInterval(() => {
+      console.log("time interval in did mount");
+    }, 1000);
 
-    this.setState({
-      userInfo: json,
-    });
-
-    console.log(json);
   }
 
   // This will called after re-rendering component on changing state variable
@@ -37,6 +33,8 @@ class UserClass extends React.Component {
 
   // This will call before you move on next component and current component is unmounting
   componentWillUnmount() {
+    clearInterval(this.timer); // Clearing the timer
+
     console.log("Child component will unmount");
   }
 
