@@ -1,0 +1,9 @@
+> SINGL RESPONSIBILITY PRINCIPLE: Each code entity (class, function) should have only 1 responsibility.
+
+> Code become REUSABLE, MAINTANABLE, TESTABLE by this principle.
+
+> For optimizing performance we shoud use chunking: Convert app into smaller chunks.
+
+> For making smaller chunks we apply lazy loading OR on demand loading.
+
+> Use lazy and Suspense from react to do this
