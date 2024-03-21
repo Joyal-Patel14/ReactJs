@@ -1,0 +1,3 @@
+> Installed tailwind css (installed with parcel)
+
+> Used tailwind css classes to make UI
