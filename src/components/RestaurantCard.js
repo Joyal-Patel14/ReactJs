@@ -1,9 +1,9 @@
-import {IMG_URL} from "../utils/constants";
+import { IMG_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
-  const {resData} = props;
+  const { resData } = props;
 
-  const {name, cuisines, avgRating, costForTwo, cloudinaryImageId, sla} = resData?.info;
+  const { name, cuisines, avgRating, costForTwo, cloudinaryImageId, sla } = resData?.info;
 
   return (
     <div className="res-card m-4 p-4 w-[250px] bg-slate-100 rounded-lg hover:bg-slate-300">
@@ -16,5 +16,20 @@ const RestaurantCard = (props) => {
     </div>
   );
 };
+
+// Higher order component which returns enhanced RestaurantCard
+
+// input - RestaurantCard => RestaurantCardOpened
+
+export const withOpenedlabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black text-green-200 m-2 p-2 rounded-lg">Opened</label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  }
+}
 
 export default RestaurantCard;

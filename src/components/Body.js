@@ -1,16 +1,18 @@
-import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import RestaurantCard, {withOpenedlabel} from "./RestaurantCard";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
 
   // State variable - Super powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
-
   const [searchText, setSearchText] = useState("");
+
+  const RestaurantCardOpened = withOpenedlabel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -21,7 +23,6 @@ const Body = () => {
 
     const json = await data.json();
 
-    console.log(json);
     setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
@@ -39,6 +40,8 @@ const Body = () => {
       <h1>Look like you are offline. Check your internet connection!!</h1>
     );
   }
+
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   return (listOfRestaurants.length === 0) ? <Shimmer /> : (
     <div className="body">
@@ -69,6 +72,13 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
+        <div className="m-4 p-4 flex items-center">
+          <label className="px-2">Username : </label>
+          <input
+            className="border border-black"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}/>
+        </div>
       </div>
       <div className="flex flex-wrap">
         {
@@ -78,7 +88,9 @@ const Body = () => {
                 to={"/restaurants/" + restaurant.info.id}
                 key={restaurant.info.id}
               >
-                <RestaurantCard resData={restaurant} />
+                {/** If restaurant is open we have to add open lable to it */
+                  restaurant.info.isOpen ? <RestaurantCardOpened resData={restaurant} /> : <RestaurantCard resData={restaurant} />
+                }
               </Link>
             );
           })

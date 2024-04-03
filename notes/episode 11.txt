@@ -1,0 +1,44 @@
+> HIGHER ORDER COMPONENTS : It's a function which takes component as argument, enhance it and returns the component
+
+> Receiving props: When calling enhanced function props passed is received on returned function in definition of higher order component
+
+> Don't change functionality of the old component. Just add on top of it.
+
+> We have built accordion for menu
+
+> Controlled and un-controlled components:
+    CONTROLLED: When parent component is controlling it's child component is called controlled component.
+    (i.e RestaurantMenu is controlling RestaurantCategory's state {showItems})
+
+> How can we change the state variable of parent from the child (i.e showIndex)?
+    > We will pass one prop as funciton to the child
+    > It is also called lifting state up (from children to parent) (we change state of parent from child)
+
+> useContext() - context is used to make data centralized so that it can be used anywhere throught the App.
+
+> by using context you can use data anywhere in components.
+
+> For using context in class based component you have to use <YourContext.Consumer> tag in which inside calback function you will get context data
+
+> To update the value of context dynamically you can use <YourContext.Provider> and set value inside value attribute
+
+> If you use provider for specific portion then modified value will be there on specific portion.
+
+    Example:
+    return (
+        // default value of context
+        <UserContext.Provider value={{loggedInUser: userName}}>
+
+        {/**Joyal */}
+        <div className="app">
+            <UserContext.Provider value={{loggedInUser: "Elon Musk"}}>
+
+            {/**Elon Musk */}
+            <Header />
+            </UserContext.Provider>
+            <Outlet />
+        </div>
+        </UserContext.Provider>
+    );
+
+> We want to change state variable and store it in context then we also paas the set method of state too. See App.js file and input tag in body
