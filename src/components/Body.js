@@ -75,7 +75,7 @@ const Body = () => {
         <div className="m-4 p-4 flex items-center">
           <label className="px-2">Username : </label>
           <input
-            className="border border-black"
+            className="border border-black pl-1"
             value={loggedInUser}
             onChange={(e) => setUserName(e.target.value)}/>
         </div>

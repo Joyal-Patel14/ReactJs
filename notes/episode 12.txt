@@ -1,0 +1,24 @@
+
+> REDUX library: REACT and REDUX are separate libraries
+> Redux offer easy debugging
+
+> Redux provide whole large global object to store the data.
+> That object is divided into the slices (small part of large object)
+> Why need slice: we separate multiple slice according to logic (cart slice for cart info, user slice for logged in user info, themes slice, etc...)
+> initially each slice is empty but as we put data in it, it update only that particular slice
+
+> https://excalidraw.com/#json=PqJ4VQcRCW7WAV0x0UxxL,ScYSAwq9364zLBTJL5UQ-Q (Diagram for understanding)
+
+
+> -------- Redux --------------
+> Install @reduxjs/toolkit and react-redux
+> Build our store
+> Connect our store to app
+> Create a slice (cartSlice)
+> dispatch (action)
+> read data (selector)
+
+
+> While using selector. be careful to subscribe the right portion of the store.
+> if you subscribe whole store then anything changes in any slice your component will be effected (performance loss)
+> Redux toolkit uses immer library behind the scenes.
