@@ -1,0 +1,28 @@
+
+> TESTING APPLICATION
+
+> Types of testing (developer)
+
+    - Unit Testing : Test react component in isolation
+
+    - Integration Testing : Testing the integration of components
+
+    - End to End Testing (e2e Testing) : Testing react application from user landing to user leaving site (all the flows)
+
+> React testing library for testing
+
+> Setup
+    - Install react testing librabry
+    - Install jest
+    - Installed Babel dependencies
+    - Configure Babel
+    - Configure parcel config file to disable default babel transpilation
+    - Jest - npx jest --init
+    - Install jsdom librabry
+    - Install @babel/preset-react - to make JSX work in test cases
+    - Include @babel/preset-react inside my babel config
+    - Install @testing-library/jest-dom
+
+> When you are updating any state in component and testing it, Wrap component inside act() function
+
+> you can also test the html tag by passing `data-testid` to the tag and getting it in test case

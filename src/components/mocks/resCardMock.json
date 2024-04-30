@@ -1,0 +1,70 @@
+{
+    "info": {
+        "id": "53986",
+        "name": "Subway",
+        "cloudinaryImageId": "63178e3e64d503a479f2a2048a474552",
+        "locality": "Gandhinagar",
+        "areaName": "Sector 11",
+        "costForTwo": "₹350 for two",
+        "cuisines": [
+            "Healthy Food",
+            "Salads",
+            "Snacks",
+            "Desserts",
+            "Beverages"
+        ],
+        "avgRating": 4.4,
+        "parentId": "2",
+        "avgRatingString": "4.4",
+        "totalRatingsString": "5K+",
+        "sla": {
+            "deliveryTime": 29,
+            "lastMileTravel": 6.5,
+            "serviceability": "SERVICEABLE",
+            "slaString": "25-30 mins",
+            "lastMileTravelString": "6.5 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-04-25 22:14:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "aggregatedDiscountInfoV2": {},
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {
+        "context": "seo-data-60873d50-10fe-45b1-a624-ba0c99232300"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/subway-gandhinagar-sector-11-ahmedabad-53986",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}
